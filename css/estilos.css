@@ -1,0 +1,384 @@
+/*PALETA DE COLORES
+#0C5959 - verdeazul
+#0FBF4D - verde
+#55D983 - verde claro
+#C3F2B6 - verde clarísimo
+#7999D9 - azul
+
+*/
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Montserrat-VariableFont_wght, sans-serif;
+}
+
+a, i, a:visited {
+    color: #0C5959;
+}
+
+a:hover, i:hover {
+    color: #7999D9;  
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    margin: 1.5rem 0px 0.8rem;  
+}
+h4 {
+    margin-bottom: 0.8rem;
+}
+.titulo {
+    font-size: 2.2rem;
+    
+}
+
+p {
+    margin: 0.8rem 0px;
+}
+
+/*TIPOGRAFÍA*/
+
+@font-face {
+    font-family: "Megrim-Regular";
+    src: url("../fonts/megrim/Megrim-Regular.ttf") ;
+}
+
+@font-face {
+    font-family:"Montserrat-VariableFont_wght", sans-serif;
+    src: url("../fonts/comforter/Montserrat-VariableFont_wght.ttf") ;
+}
+
+/*AREAS*/
+    #encabezado {
+        grid-area: encabezado;
+        padding: 2rem 5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #0C5959;
+    }
+
+    main {
+        grid-area: contenido; 
+        margin: 2rem 0px;   
+    }
+
+    #lateralIzq {
+        grid-area: lateralIzq;
+        padding: 2rem 1rem 1rem;
+    }
+
+    #lateralDer {
+        grid-area: lateralDer;
+        padding: 2rem 1rem 1rem;  
+    }
+
+    footer {
+        grid-area: pie;
+        padding: 1rem 5rem;
+        border-top: 1px solid #0C5959;
+        display: flex;
+        justify-content: space-between;
+    }
+/*GRID*/
+    #gridAreas {
+        
+        display: grid;
+        grid-template-areas:
+            "encabezado encabezado encabezado"
+            "lateralIzq contenido lateralDer"
+            "pie pie pie"
+        ;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-column-gap: 5rem;
+    }
+
+/*ESTILOS GENERALES*/
+    /*HEADER Y NAV*/
+    #encabezado h1 {
+        font-family: Megrim-Regular;
+    }
+
+    .listaNav {
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .listaNav ul{
+        display: flex;
+    }
+
+    .listaNav li {
+        margin-left: 2rem;
+        align-content: flex-end;
+        
+    }
+    /*contenido autores*/
+    .creadores {
+        display: flex;
+    }
+    .autores {
+        margin: 1rem;
+    }
+    .autores img {
+        border-radius: 50%;
+    }
+
+    .autores h3 {
+        text-align: center;
+    }
+
+    .margen {
+        margin: 0px 1rem;
+    }
+
+    /*Aside recomendados*/
+    .recomendados {
+        margin-bottom: 2rem;
+    }
+
+    /*contacto*/
+    .inputs {
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        margin-bottom: 1rem;
+    }
+
+    #mapa iframe {
+        width: 100%;
+    }
+
+    /*Recomendados*/
+    .recomendacion {
+        display: flex;
+        margin-bottom: 2rem;
+        
+    }
+    .numero {
+        font-size: 7rem;
+        margin: 1rem;
+        color: #0C5959;
+        
+    }
+    .imagenRecomendados {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .recomendacion img {
+        width: 60%;
+    }
+    /*footer*/
+    #pie a {
+        margin-left: 2rem;
+    }
+
+    .piePagina {
+        display: flex;
+        align-items: flex-end;
+    }
+
+/*TIENDA*/
+    #productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 3rem; 
+    }
+    .libro {
+        padding: 1rem;
+        
+    }
+    .datosLibro{
+        margin: 1rem 0px 2rem;
+    }
+    .filt {
+        margin: 2rem 0px;
+    }
+    .filtrado {
+        margin: 0.5rem 0px;
+    }
+
+/*Noticas*/
+    .noticia {
+        margin-bottom: 2rem;
+    }
+
+/*MEDIA QUERIES*/
+/*smartphone*/
+@media only screen and (max-width: 480px) {
+    #gridAreas {
+        display: grid;
+        grid-template-areas:
+            "encabezado"
+            "contenido"
+            "lateralIzq"
+            "lateralDer"
+            "pie"
+        ;
+        grid-template-columns: 1fr;  
+    }
+
+    #encabezado {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    main {
+        margin: 1rem;   
+    }
+
+    #lateralIzq {
+        padding: 0px;
+        margin: 1rem;
+    }
+
+    #lateralDer {  
+        padding: 0px;
+        margin: 1rem;
+    }
+
+    aside img {
+        width: 50%;
+    }
+    aside h4 {
+        text-align: center;
+    }
+    .recomendados {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .listaNav {
+        margin: 1rem;
+    }
+    
+    .listaNav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .creadores {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+    .piePagina {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #pie a {
+        margin: 0rem;
+    }
+
+    /*tienda*/
+    #productos {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+    /*Recomendados*/
+    .recomendacion {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .imagenRecomendados {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .numero {
+        font-size: 7rem;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .datosRecomendados {
+        text-align: center;
+    }
+    
+    .recomendacion img {
+        width: 60%;
+    }
+
+
+}
+
+/*Tablet*/
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+    #gridAreas {
+        display: grid;
+        grid-template-areas:
+            "encabezado encabezado"
+            "contenido lateralDer"
+            "lateralIzq lateralIzq"
+            "pie pie"
+        ;
+        grid-template-columns: 3fr 1fr;  
+    }
+
+    #encabezado {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    main {
+        margin: 1rem;   
+    }
+
+    #lateralIzq {
+        padding: 0px;
+        margin: 1rem;
+    }
+
+    #lateralDer {  
+        padding: 0px;
+        margin: 1rem;
+    }
+
+    aside img {
+        width: 50%;
+    }
+    aside h4 {
+        text-align: center;
+    }
+    .recomendados {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+    .piePagina {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #pie a {
+        margin: 0rem;
+    }
+
+
+}

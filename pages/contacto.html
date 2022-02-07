@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+<!--Hoja de estilos-->
+<link rel="stylesheet" href="../css/estilos.css">
+
+<!--Scripts-->
+<script src="https://kit.fontawesome.com/d291e50854.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="gridAreas">
+        <header id="encabezado">
+            <div>
+                <a href="../index.html"><h1><i class="fas fa-radiation"></i>Distópicos</h1></a> 
+            </div>
+            <nav class="listaNav">
+                <ul>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="recomendados.html">Recomendados</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside id="lateralIzq">
+
+        </aside>        
+    <main>
+        <div id="contenido">
+            <form id="contacto">
+                <h2>Contacto</h2>
+                <div class="inputs">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div class="inputs">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="inputs">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="telefono" id="telefono">
+                </div>
+                <div class="inputs">
+                    <label for="motivo">Motivo de su consulta</label>
+                    <select name="motivo">
+                        <option value="informacion" selected>Información</option>
+                        <option value="devoluciones" >Devoluciones</option>
+                        <option value="pedidos">Pedidos</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
+            <section id="mapa">
+                <header>
+                    <h2>Ubicación</h2>
+                </header>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11817.506613809972!2d-8.737104699999998!3d42.22776555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1641812131796!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+    </main>
+    <aside id="lateralDer">
+        
+    </aside>
+    <footer id="pie">
+        <div>
+            <h4>Contacto</h4>
+            <p>Avenida de la Florida, nº 100. Vigo </p>
+            <p>678 123 123</p>
+            <p>info@distopicos.com</p>  
+        </div>
+        <div class="piePagina">
+            <a href="contacto.html">Formulario de contacto</a>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de cookies</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
