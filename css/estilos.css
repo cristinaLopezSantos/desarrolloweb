@@ -6,6 +6,86 @@
 #7999D9 - azul
 
 */
+/*GRADIENTES*/
+body {
+    /*background-image: linear-gradient(gray, white);*/
+    background-color: #b3cdd1;
+    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+}
+
+#encabezado {
+    background-image: linear-gradient(#7999D9, #0C5959);
+}
+
+/*ANIMACIONES*/
+h1 {
+    animation-name: titulo;
+    animation-iteration-count:infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+
+}
+
+h2 {
+    animation-name: subtitulo;
+    animation-iteration-count:infinite;
+    animation-duration: 5s;
+}
+
+p {
+    animation-name: parrafos;
+    animation-iteration-count:infinite;
+    animation-duration: 5s;
+}
+
+/*TRANSICIONES*/
+img {
+    width: 100%;
+    transition: transform 2s
+}
+
+img:hover {
+    transform: scale(1.5);
+    border: 10px solid yellowgreen;
+}
+
+
+@keyframes titulo {
+    from {
+        margin-left: 100%;
+        width: 300%
+    } to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes subtitulo {
+    from { 
+        transform: rotate(0deg); 
+        color: orange;
+    } to { 
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes parrafos {
+    0% { 
+        color: black;
+    } 25% { 
+        color: red;
+    } 50% {
+        color: blue;
+    } 75% {
+        color: green;
+    } 100% {
+        color: yellow;
+    }
+}
+
+
 
 
 * {
@@ -16,19 +96,21 @@
     text-decoration: none;
     list-style: none;
     font-family: Montserrat-VariableFont_wght, sans-serif;
-}
+    
+    }
+
+    img {
+        width: 100%;}
 
 a, i, a:visited {
-    color: #0C5959;
+    color: white;
 }
 
 a:hover, i:hover {
-    color: #7999D9;  
+    color: black;  
 }
 
-img {
-    width: 100%;
-}
+
 
 h2 {
     margin: 1.5rem 0px 0.8rem;  
